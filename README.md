@@ -2,7 +2,7 @@
 OpenNeuro is an opensource, locally running AI companion.
 
 ## Implementation
-OpenNeuro currently consists of three code repositories. To visit them, click on the respective git submodule.
+OpenNeuro currently consists of three code repositories. To visit them, click on the corresponding git submodule in ```./repos/```.
 
 ## Assignments
 Assignment pdfs are in its corresponding ```./a{n: 1, 2, 3, 4, 5}``` directory.

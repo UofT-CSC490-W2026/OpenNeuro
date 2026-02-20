@@ -1,9 +1,9 @@
 [submodule "OpenNeuro"]
-	path = OpenNeuro
+	path = repos/OpenNeuro
 	url = https://github.com/Project-NEURIA/OpenNeuro
 [submodule "openvr-virtual-driver"]
-	path = openvr-virtual-driver
+	path = repos/openvr-virtual-driver
 	url = https://github.com/Project-NEURIA/openvr-virtual-driver
 [submodule "vrc-osc-adapters"]
-	path = vrc-osc-adapters
+	path = repos/vrc-osc-adapters
 	url = https://github.com/Project-NEURIA/vrc-osc-adapters
