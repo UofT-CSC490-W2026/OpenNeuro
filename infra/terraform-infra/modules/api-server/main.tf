@@ -4,7 +4,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 5.0"
+      version = "= 5.31.0"
     }
   }
 }
@@ -55,7 +55,7 @@ data "archive_file" "lambda_placeholder" {
 
           req_headers = {
               k: v for k, v in headers.items()
-              if k.lower() not in ("host", "content-length")
+              if k.lower() not in ("host", "content-length", "accept-encoding")
           }
           req_headers["Host"] = MODAL_BASE_URL.split("//")[1]
 
@@ -101,8 +101,23 @@ resource "aws_lambda_function" "api" {
   tags = { Name = "openneuro-${var.environment}-api" }
 }
 
-# Lambda Function URL (direct public URL, no API Gateway needed)
 resource "aws_lambda_function_url" "api" {
   function_name      = aws_lambda_function.api.function_name
   authorization_type = "NONE"
+}
+
+# Allow public access to the Function URL
+resource "aws_lambda_permission" "public_access_url" {
+  statement_id           = "AllowPublicAccessUrl"
+  action                 = "lambda:InvokeFunctionUrl"
+  function_name          = aws_lambda_function.api.function_name
+  principal              = "*"
+  function_url_auth_type = "NONE"
+}
+
+resource "aws_lambda_permission" "public_access_invoke" {
+  statement_id  = "AllowPublicAccessInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.api.function_name
+  principal     = "*"
 }
