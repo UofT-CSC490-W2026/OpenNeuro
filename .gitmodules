@@ -7,3 +7,6 @@
 [submodule "vrc-osc-adapters"]
 	path = repos/vrc-osc-adapters
 	url = https://github.com/Project-NEURIA/vrc-osc-adapters
+[submodule "a4/nanochat"]
+	path = a4/nanochat
+	url = https://github.com/MarksonChen/nanochat
