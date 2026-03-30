@@ -2,7 +2,7 @@
 OpenNeuro is an open-source, locally running AI companion.
 
 ## Implementation
-The main codebase lives in the [`repos/OpenNeuro`](repos/OpenNeuro) submodule.
+The main codebase lives in the repos/OpenNeuro submodule (This is pointing to a commit before the deadline which we submit for our project).
 
 ### Prerequisites
 
