@@ -51,3 +51,5 @@ Assignment PDFs are in their corresponding `./a{1..5}` directories.
 
 ## Infrastructure
 IaC scripts can be found in the `./infra` directory. These scripts are used for hosting cloud models that serve as an alternative option to running all models locally.
+## Other
+If you want to use the VR related modules, you must install our custom vr driver https://github.com/Project-NEURIA/openvr-virtual-driver
