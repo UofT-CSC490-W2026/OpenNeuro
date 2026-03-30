@@ -1,6 +1,6 @@
 # Developer Guide
 
-This document covers the internal architecture of OpenNeuro for contributors and anyone building new components. For usage and quick start, see [README.md](README.md). For exhaustive API-level detail, see the wiki files in [dev-ignore/](dev-ignore/).
+This document covers the internal architecture of OpenNeuro for contributors and anyone building new components. For usage and quick start, see [README.md](README.md).
 
 ## Table of Contents
 
@@ -679,7 +679,5 @@ GitHub Actions runs on PRs to `main`:
 | Resource | Description |
 |---|---|
 | [README.md](README.md) | Project overview, quick start, component catalogue |
-| [dev-ignore/backend_wiki.md](dev-ignore/backend_wiki.md) | Exhaustive backend API reference (every method, every field) |
-| [dev-ignore/frontend_wiki.md](dev-ignore/frontend_wiki.md) | Exhaustive frontend reference (every hook, every component) |
 | [project/docs/system_design.md](project/docs/system_design.md) | System design document |
 | [docs/developer-guide/](docs/developer-guide/) | MDX developer guide (architecture, channels, frames, etc.) |
